@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+* {margin:0; padding:0; box-sizing:border-box;}
+ /*width값에 테두리선, 여백 값을 포함시킨다. */
+
+:root {
+    --color-primary: #3b6ff2;
+    --color-primary-dark: #2952c8;
+    --color-text: #222;
+    --color-text-light: #777;
+    --color-border: #e2e2e2;
+    --color-bg: #fafafa;
+    --header-height: 64px;
+}
+
+a {text-decoration:none; color:#333;}
+/* 밑줄 생략 */
+
+ul,ol {list-style:none;}
+/* 목록 사용안함 */
+
+body { 
+	/*color:#333;*/
+	color: var(--color-text);
+	background-color:var(--color-bg);
+	line-height:1.5;
+	/* 줄간격을 1.5배(기본적으로 제공하는 줄간격의)로.  */
+ }
+
+.site-header {
+	height:var(--header-height); 
+	border-bottom:1px solid var(--color-border); 
+	background:#fff; }
+/* class 이름을 사용할 때는 . 을 사용 */
+/* background : 배경색 */
+
+.header-inline {
+	width:1080px; height:100%; margin:0 auto; padding:0 20px; 
+	display:flex; 
+	/* 부모에게 felx를 적용하면 자식 그룹이 가로 배치된다. */
+	align-items:center; 
+	/* 요소(그룹안의 요소들)들은 가운데로 배치 */
+	justify-content:space-between;
+	/* 그룹을 양쪽으로 정렬 */
+}
+
+.gnb ul {
+	/* 하위선택자 */
+	display:flex;
+	gap:30px;
+}
+
+.gnb a, .member-menu a {
+	font-weight:bold;
+	/* 글자 진하게 */
+	display:inline-block;
+	/* 인라인요수 태그에 블럭 css를 적용 */
+	padding: 8px 16px;
+	/* display:inline;
+	블럭속성(가로폭100%)을 인라인속성으로 바꿔라
+	display:block; 
+	인라인속성 태그를 블럭속성으로 바꿔라
+	*/
+}
+
+.gnb a:hover, .member-menu a:hover {
+	/* :hover 마우스가 a 위에 올라갔을 때. */
+	color:var(--color-primary);
+	color:#fff;
+	background:#f28a6d;
+}
+
+/* --- footer 공통 스타일 ---*/
+.site-footer {
+   background:#fff; border:1px solid var(--color-border); color:var(--color-text);
+   font-size:14px; margin-top:60px; padding:30px 0; text-align:center;
+}
+.footer-sub {
+   margin-top:6px;
+}
+
+/* 공통 버튼 css */
+.btn{
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 6px; 
+	font-size: 14px;
+	border: none;
+	cursor: pointer; /* 커서를 손가락 모양 변경 */
+}
+
+.btn-primary{
+	background-color: var(--color-primary);
+	color: #fff;
+}
+
+.btn-primary:hover{
+	background-color: var(--color-primary-dark);
+	color: #fff;
+}
+
+.btn-outline{
+	background-color: #fff;
+	border: 1px solid var(--color-border);
+	color: var(--color-text);
+}
+
+.img{
+	max-width: 100%;
+}
+
+
+
+
